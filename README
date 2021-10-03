@@ -1,0 +1,15 @@
+Fork of the theme SnowFlat of q2a (which can be found at https://github.com/q2a/question2answer/tree/dev/qa-theme/SnowFlat )
+
+It changes in particular:
+- the look & feel
+- html meta in the header related to facebook open graph and twitter cards
+
+I'm afraid I'm not really aware of the other changes that were made...
+
+(This repo isn't a github fork because the original SnowFlat them isn't a standalone repo: it is bundled with question2answer).
+
+I'm afraid the changes weren't made with reuse in mind so some of those changes are pretty specific to mesquestionszerodechet.fr
+(for instance the fb:app_id, the reference to a logo file) so it may not be trivial to re-use for another site... :-/
+
+As far as license is concerned: most of this repo is probably GPL v2 (or any later version) since it is based on a code
+which is itself GPL v2 (see https://github.com/q2a/question2answer/blob/dev/LICENSE.html )
