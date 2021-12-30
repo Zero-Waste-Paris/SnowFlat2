@@ -67,7 +67,9 @@ class qa_html_theme extends qa_html_theme_base
     public function head_custom()
     {
       $postid = isset($this->content["q_view"]) ? $this->content["q_view"]["raw"]["postid"] : null;
-
+      
+      $description = array_key_exists('description', $this->content) ? $this->content['description'] : "Foire aux questions collaborative sur le zéro déchet. Posez vos questions, répondez à celles des autres." ;
+	    
       // Facebook
        $this->output_array(array(
            "<!-- FaceBook OpenGraph - from template -->",
@@ -75,7 +77,7 @@ class qa_html_theme extends qa_html_theme_base
            "  <meta property=\"og:type\" content=\"website\" />",
            "  <meta property=\"fb:app_id\" content=\"2905131609816395\" />",
            "  <meta property=\"og:title\" content=\"" . $this->current_title() . "\" />",
-           "  <meta property=\"og:description\" content=\"" . $this->content['description'] . "\" />",
+           "  <meta property=\"og:description\" content=\"$description\" />",
            //"  <meta property=\"og:description\" content=\"Foire aux questions collaborative sur le zéro déchet. Posez vos questions, répondez à celles des autres.\" />",
            "  <meta property=\"og:url\" content=\"" . $this->canonical_url() . "\" />",
            "  <meta property=\"og:site_name\" content=\"" . $this->content['site_title'] . "\" />"
